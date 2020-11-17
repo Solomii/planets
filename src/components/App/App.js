@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import BooksContainer from "../../containers/PlanetsContainer";
+import PlanetsContainer from "../../containers/PlanetsContainer";
 
 function App() {
   return (
     <div className="App">
-      <BooksContainer />
+      <PlanetsContainer />
     </div>
   );
 }

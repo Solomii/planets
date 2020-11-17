@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { getPlanetFunc, getMorePlanetFunc } from "../actions/planets";
+import { getPlanetFunc, getPostByIdFunc } from "../actions/planets";
 import { planets } from "../reducers";
 import Planets from "../components/Planets";
 

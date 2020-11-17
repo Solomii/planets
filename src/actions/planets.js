@@ -4,7 +4,7 @@ import {
   GET_PLANETS_FAIL,
 } from "../constants/ActionTypes";
 
-import { getPlanets, getMorePlanets } from "../api/planets";
+import { getPlanets } from "../api/planets";
 
 const getPlanet = async (dispatch) => {
   dispatch({ type: GET_PLANETS_REQUEST });

@@ -2,18 +2,10 @@ import {
   GET_PLANETS_REQUEST,
   GET_PLANETS_SUCCESS,
   GET_PLANETS_FAIL,
-  GET_MORE_PLANETS_REQUEST,
-  GET_MORE_PLANETS_SUCCESS,
-  GET_MORE_PLANETS_FAIL,
 } from "../constants/ActionTypes";
 
 const initialState = {
-  byId: {
-    isLoading: null,
-    error: null,
-    data: null,
-  },
-  planets: {
+  plan: {
     isLoading: null,
     error: null,
     data: null,
@@ -25,7 +17,7 @@ const planets = (state = initialState, action) => {
     case GET_PLANETS_REQUEST:
       return {
         ...state,
-        planets: {
+        plan: {
           isLoading: true,
           error: null,
           data: null,
@@ -34,7 +26,7 @@ const planets = (state = initialState, action) => {
     case GET_PLANETS_SUCCESS:
       return {
         ...state,
-        planets: {
+        plan: {
           isLoading: false,
           error: false,
           data: action.payload,
@@ -43,7 +35,7 @@ const planets = (state = initialState, action) => {
     case GET_PLANETS_FAIL:
       return {
         ...state,
-        planets: {
+        plan: {
           isLoading: false,
           error: action.payload,
           data: false,
