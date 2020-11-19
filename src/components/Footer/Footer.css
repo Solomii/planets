@@ -1,0 +1,35 @@
+.planets-footer {
+  text-align: center;
+  background-color: #201f1f;
+}
+.planets-footer-section-one-wrapper {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+}
+.planets-footer-text {
+  color: #6f6f6f;
+}
+
+.planets-footer-http {
+  color: #6f6f6f;
+  margin-top: 16px;
+  text-decoration: none;
+}
+.planets-footer-http:hover {
+  color: aliceblue;
+}
+
+.planets-footer-section-one {
+  display: flex;
+  flex-direction: row;
+}
+
+.planets-footer-section-two {
+  border-top: 0.3px #6f6f6f solid;
+}
+
+.planets-footer-section-two-wrapper {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}

@@ -1,0 +1,26 @@
+.planets-header {
+  background-color: #201f1f;
+}
+
+.planets-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.planets-header-logo-text {
+  display: flex;
+}
+.planets-header-text {
+  color: #6f6f6f;
+}
+
+.planets-header-social-icons {
+  display: flex;
+}
+.planets-header-icon {
+  color: #6f6f6f;
+}
+
+.planets-header-icon:hover {
+  color: aliceblue;
+}
