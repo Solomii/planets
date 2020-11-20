@@ -56,5 +56,5 @@
 
 .planets-box-name:hover {
   color: rgb(144, 146, 144);
-  box-shadow: black;
+  background: rgba(22, 20, 20, 0.6);
 }
