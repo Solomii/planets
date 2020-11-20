@@ -9,7 +9,7 @@ const Planets = ({ planets, getPlanets }) => {
       <div className="planets-box-name">{i.englishName}</div>
     ));
   } else {
-    b = <div>No data</div>;
+    b = <div></div>;
   }
   let { id } = useParams();
   console.log(id);

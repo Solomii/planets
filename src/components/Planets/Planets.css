@@ -51,6 +51,7 @@
   border: 1px #6f6f6f solid;
   cursor: pointer;
   padding: 5px;
+  background: rgba(22, 20, 20, 0.3);
 }
 
 .planets-box-name:hover {
