@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { getPlanetFunc, getPostByIdFunc } from "../actions/planets";
 import { planets } from "../reducers";
-import Planets from "../components/Planets";
+import Planets from "../components/Planets/Planets";
 
 const PlanetsContainer = ({ planets, getPlanets }) => (
   <Planets planets={planets} getPlanets={getPlanets} />

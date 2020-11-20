@@ -14,7 +14,7 @@ const HeaderPlanets = () => {
           </div>
         </div>
         <div className="planets-header-social-icons">
-          <div className="planets-header-boxs-icons">
+          <div className="planets-header-box-icon">
             <a
               className="planets-header-icon"
               href="https://github.com/systeme-solaire"
@@ -22,7 +22,7 @@ const HeaderPlanets = () => {
               <FaGithub />
             </a>
           </div>
-          <div>
+          <div className="planets-header-box-icon">
             <a
               className="planets-header-icon"
               href="https://www.facebook.com/le.systeme.solaire"
@@ -30,7 +30,7 @@ const HeaderPlanets = () => {
               <FaFacebookF />
             </a>
           </div>
-          <div>
+          <div className="planets-header-box-icon">
             <a
               className="planets-header-icon"
               href="https://twitter.com/systeme_solaire"
@@ -38,7 +38,7 @@ const HeaderPlanets = () => {
               <FaTwitter />
             </a>
           </div>
-          <div>
+          <div className="planets-header-box-icon">
             <a
               className="planets-header-icon"
               href="https://www.le-systeme-solaire.net/"

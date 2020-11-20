@@ -9,14 +9,23 @@
 
 .planets-header-logo-text {
   display: flex;
+  margin-left: 150px;
 }
+
 .planets-header-text {
   color: #6f6f6f;
 }
 
 .planets-header-social-icons {
+  margin-right: 100px;
+  padding-top: 8px;
   display: flex;
 }
+
+.planets-header-box-icon {
+  margin: 15px;
+}
+
 .planets-header-icon {
   color: #6f6f6f;
 }
