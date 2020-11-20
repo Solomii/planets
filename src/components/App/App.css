@@ -1,4 +1,4 @@
 .App {
-  background-image: url(../../img/planets-backgroundF.jpg);
-  /* background-repeat: no-repeat; */
+  background: url(../../img/b2.jpg) center/cover;
+  background-repeat: no-repeat;
 }

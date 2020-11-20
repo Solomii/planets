@@ -16,6 +16,7 @@
   margin-bottom: 50px;
   outline: none;
   cursor: pointer;
+  background-color: #222020;
 }
 
 .planets-box-button:hover {
@@ -51,10 +52,10 @@
   border: 1px #6f6f6f solid;
   cursor: pointer;
   padding: 5px;
-  background: rgba(22, 20, 20, 0.3);
+  background: rgba(22, 20, 20, 0.5);
 }
 
 .planets-box-name:hover {
   color: rgb(144, 146, 144);
-  background: rgba(22, 20, 20, 0.6);
+  background: rgba(22, 20, 20, 0.9);
 }
