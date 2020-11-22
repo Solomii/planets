@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import HeaderPlanets from "../Header/Header";
+// import PlanetsDetals from "../PlanetDetals/PlanetsDetals";
 import PlanetsContainer from "../../containers/PlanetsContainer";
 import PlanetsFooter from "../Footer/Footer";
 
@@ -9,6 +10,7 @@ function App() {
     <div className="App">
       <HeaderPlanets />
       <PlanetsContainer />
+      {/* <PlanetsDetals /> */}
       <PlanetsFooter />
     </div>
   );

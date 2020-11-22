@@ -1,3 +1,7 @@
-export const GET_PLANETS_REQUEST = "getplanetsrequest";
-export const GET_PLANETS_SUCCESS = "getplanetssuccess";
-export const GET_PLANETS_FAIL = "getplanetsfail";
+export const GET_ALL_DATA_REQUEST = "getalldatarequest";
+export const GET_ALL_DATA_SUCCESS = "getalldatasuccess";
+export const GET_ALL_DATA_FAIL = "getalldatafail";
+
+export const GET_ALL_PLANETS_REQUEST = "getallplanetsrequest";
+export const GET_ALL_PLANETS_SUCCESS = "getallplanetssuccess";
+export const GET_ALL_PLANETS_FAIL = "getallplanetsfail";

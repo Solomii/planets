@@ -1,6 +1,7 @@
 .planets-box {
-  overflow: auto;
   display: flex;
+  background: url(../../img/b2.jpg) center/cover;
+  background-repeat: no-repeat;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -30,16 +31,16 @@
 
 .planets-box-names-wrapper {
   margin-left: 30px;
+  display: flex;
   height: 300px;
   overflow: hidden;
-  overflow-y: auto;
   flex-direction: row;
 }
 
 .planets-box-names {
+  overflow-y: auto;
   display: flex;
   color: aliceblue;
-  flex-direction: row;
   flex-wrap: wrap;
 }
 
