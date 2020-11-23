@@ -18,7 +18,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    getPlanets: getAllPlanetFunc(dispatch),
+    getAllPlanets: getAllPlanetFunc(dispatch),
     getAllData: getAllDataFunc(dispatch),
   };
 };

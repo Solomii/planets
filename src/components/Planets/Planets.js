@@ -30,8 +30,8 @@ const Planets = ({ planets, getAllPlanets, getAllData }) => {
   if (planets.planet && planets.planet.data && planets.planet.data.bodies) {
     allPlanets = planets.planet.data.bodies.map((i) => (
       <div>
-        {console.log(i)}
         {i.englishName}
+        {console.log(i)}
       </div>
     ));
   } else {
