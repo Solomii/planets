@@ -13,11 +13,15 @@ const PlanetsFooter = () => {
             Le Système solaire à portée de votre souris.
           </a>
         </div>
+        <div className="planets-footer-text">
+          <p className="planets-footer-phon">CONTACTS:</p>
+          <p>+38 (000) 555 55 55</p>
+        </div>
       </section>
       <section className="planets-footer-section-two">
         <div className="planets-footer-section-two-wrapper">
           <p className="planets-footer-text">
-            Made with ♥ in <img src="" /> by Christophe - Copyright © 2019-2020
+            Made with ♥ in <img src="" /> by Solomiya - Copyright © 2019-2020
             All rights reserved.
           </p>
         </div>

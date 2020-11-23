@@ -31,7 +31,7 @@ const getData = async (dispatch) => {
     dispatch({ type: GET_ALL_DATA_FAIL, payload: e });
   }
 };
-export const getPlanetFunc = (dispatch) => {
+export const getAllPlanetFunc = (dispatch) => {
   return () => getPlanet(dispatch);
 };
 

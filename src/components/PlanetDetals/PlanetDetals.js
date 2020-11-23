@@ -1,8 +1,5 @@
 import React from "react";
-import "./Planets.css";
-import { useParams, Link, Switch, Route } from "react-router-dom";
-
-const Planets = ({ planets, getAllPlanets, getAllData }) => {
+const PlanetDetals = ({ planets, getAllPlanets, getAllData }) => {
   let allData, allPlanets;
   if (planets.alldata && planets.alldata.data && planets.alldata.data.bodies) {
     allData = planets.alldata.data.bodies.map((i) => (
@@ -20,38 +17,38 @@ const Planets = ({ planets, getAllPlanets, getAllData }) => {
             // </p>
           );
         })} */}
-        <Link to={"/planets/bodies/" + i.id}>More...</Link>
+        {/* <Link to={"/planets/bodies/" + i.id}>More...</Link>
+        <Switch>
+          <Route path="/planets/bodies/:id"></Route>
+        </Switch> */}
       </div>
     ));
   } else {
     allData = <div></div>;
   }
 
-  if (planets.planet && planets.planet.data && planets.planet.data.bodies) {
-    allPlanets = planets.planet.data.bodies.map((i) => (
-      <div>
-        {console.log(i)}
-        {i.englishName}
-      </div>
-    ));
-  } else {
-    allPlanets = <div>no data</div>;
-  }
+  // if (planets.planet && planets.planet.data && planets.planet.data.bodies) {
+  //   allPlanets = planets.planet.data.bodies.map((i) => (
+  //     <div>{i.englishName}</div>
+  //   ));
+  // } else {
+  //   allPlanets = <div></div>;
+  // }
   return (
     <div className="planets-box">
       <button className="planets-box-button" onClick={getAllData}>
         Planets
       </button>
-      <button className="planets-box-button" onClick={getAllPlanets}>
+      {/* <button className="planets-box-button" onClick={getAllPlanets}>
         AllData
-      </button>
+      </button> */}
       <div className="planets-box-names-wrapper">
         <div className="planets-box-names">{allData}</div>
       </div>
-      <div className="planets-box-names-wrapper">
+      {/* <div className="planets-box-names-wrapper">
         <div className="planets-box-names">{allPlanets} </div>
-      </div>
+      </div> */}
     </div>
   );
 };
-export default Planets;
+export default PlanetDetals;

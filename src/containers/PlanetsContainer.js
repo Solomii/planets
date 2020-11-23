@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { getPlanetFunc, getAllDataFunc } from "../actions/planets";
+import { getAllPlanetFunc, getAllDataFunc } from "../actions/planets";
 import planets from "../reducers/planets";
 import Planets from "../components/Planets/Planets";
 
@@ -18,7 +18,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    getPlanets: getPlanetFunc(dispatch),
+    getPlanets: getAllPlanetFunc(dispatch),
     getAllData: getAllDataFunc(dispatch),
   };
 };

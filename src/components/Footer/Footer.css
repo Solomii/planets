@@ -2,11 +2,19 @@
   text-align: center;
   background-color: #201f1f;
 }
+
+.planets-footer-section-one {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 20px;
+}
+
 .planets-footer-section-one-wrapper {
   margin-top: 20px;
   margin-bottom: 20px;
   display: flex;
 }
+
 .planets-footer-text {
   color: #6f6f6f;
 }
@@ -20,9 +28,8 @@
   color: aliceblue;
 }
 
-.planets-footer-section-one {
-  display: flex;
-  flex-direction: row;
+.planets-footer-phon {
+  margin-right: 50px;
 }
 
 .planets-footer-section-two {

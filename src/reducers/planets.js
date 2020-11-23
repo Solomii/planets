@@ -26,7 +26,7 @@ const planets = (state = initialState, action) => {
     case GET_ALL_PLANETS_REQUEST:
       return {
         ...state,
-        planet: {
+        plan: {
           isLoading: true,
           error: null,
           data: null,
@@ -35,7 +35,7 @@ const planets = (state = initialState, action) => {
     case GET_ALL_PLANETS_SUCCESS:
       return {
         ...state,
-        planet: {
+        plan: {
           isLoading: false,
           error: false,
           data: action.payload,
@@ -44,7 +44,7 @@ const planets = (state = initialState, action) => {
     case GET_ALL_PLANETS_FAIL:
       return {
         ...state,
-        planet: {
+        plan: {
           isLoading: false,
           error: action.payload,
           data: false,
