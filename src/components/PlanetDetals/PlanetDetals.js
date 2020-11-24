@@ -1,54 +1,46 @@
 import React from "react";
-const PlanetDetals = ({ planets, getAllPlanets, getAllData }) => {
-  let allData, allPlanets;
-  if (planets.alldata && planets.alldata.data && planets.alldata.data.bodies) {
-    allData = planets.alldata.data.bodies.map((i) => (
-      <div className="planets-box-name">
-        {i.englishName} <br />
-        {/* {Object.keys(i).map(function (keyName, keyIndex) {
-          return (
-            // <p key={keyName}>
-            //   {keyName}
-            //   {console.log(i[keyName])}
-            // </p>
-            // <p>
-            //   {JSON.stringify(i, null, 2)}
-            //   {console.log(i[keyName])}
-            // </p>
-          );
-        })} */}
-        {/* <Link to={"/planets/bodies/" + i.id}>More...</Link>
-        <Switch>
-          <Route path="/planets/bodies/:id"></Route>
-        </Switch> */}
-      </div>
-    ));
-  } else {
-    allData = <div></div>;
-  }
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-  // if (planets.planet && planets.planet.data && planets.planet.data.bodies) {
-  //   allPlanets = planets.planet.data.bodies.map((i) => (
-  //     <div>{i.englishName}</div>
-  //   ));
-  // } else {
-  //   allPlanets = <div></div>;
-  // }
-  return (
-    <div className="planets-box">
-      <button className="planets-box-button" onClick={getAllData}>
-        Planets
-      </button>
-      {/* <button className="planets-box-button" onClick={getAllPlanets}>
-        AllData
-      </button> */}
-      <div className="planets-box-names-wrapper">
-        <div className="planets-box-names">{allData}</div>
-      </div>
-      {/* <div className="planets-box-names-wrapper">
-        <div className="planets-box-names">{allPlanets} </div>
-      </div> */}
-    </div>
-  );
-};
+class PlanetDetals extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      items: [],
+      isLoaded: false,
+      error: null,
+    };
+  }
+  componentDidMount() {
+    let baseUrl =
+      "https://api.le-systeme-solaire.net/rest/bodies/?filter[]=isPlanet,neq,false";
+    fetch(baseUrl + "lune")
+      .then((res) => res.json())
+      .then((json) => {
+        console.log(this.state.items);
+        this.setState({
+          isLoaded: true,
+          items: json.bodies,
+        });
+      });
+  }
+  render() {
+    const { error, isLoaded, items } = this.state;
+    if (error) {
+      return <div>Error!</div>;
+    }
+    if (!isLoaded) {
+      return <div>Loading...</div>;
+    } else {
+      return (
+        <div>
+          <ul>
+            {items.map((item) => (
+              <li key={item.id}></li>
+            ))}
+          </ul>
+        </div>
+      );
+    }
+  }
+}
 export default PlanetDetals;

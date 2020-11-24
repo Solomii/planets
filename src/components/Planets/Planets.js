@@ -1,6 +1,7 @@
 import React from "react";
 import "./Planets.css";
 import { useParams, Link, Switch, Route } from "react-router-dom";
+import PlanetDetals from "../PlanetDetals/PlanetDetals";
 
 const Planets = ({ planets, getAllPlanets, getAllData }) => {
   let allData, allPlanets;
@@ -8,19 +9,10 @@ const Planets = ({ planets, getAllPlanets, getAllData }) => {
     allData = planets.alldata.data.bodies.map((i) => (
       <div className="planets-box-name">
         {i.englishName} <br />
-        {/* {Object.keys(i).map(function (keyName, keyIndex) {
-          return (
-            // <p key={keyName}>
-            //   {keyName}
-            //   {console.log(i[keyName])}
-            // </p>
-            // <p>
-            //   {JSON.stringify(i, null, 2)}
-            //   {console.log(i[keyName])}
-            // </p>
-          );
-        })} */}
-        <Link to={"/planets/bodies/" + i.id}>More...</Link>
+        {/* <Link to={"/planets/bodies/" + i.id}>More...</Link>
+        <Switch>
+          <Route path="/planets/bodies/:id" component={PlanetDetals}></Route>
+        </Switch> */}
       </div>
     ));
   } else {
@@ -29,13 +21,10 @@ const Planets = ({ planets, getAllPlanets, getAllData }) => {
 
   if (planets.planet && planets.planet.data && planets.planet.data.bodies) {
     allPlanets = planets.planet.data.bodies.map((i) => (
-      <div>
-        {i.englishName}
-        {console.log(i)}
-      </div>
+      <div>{i.englishName}</div>
     ));
   } else {
-    allPlanets = <div>no data</div>;
+    allPlanets = <div></div>;
   }
   return (
     <div className="planets-box">
@@ -49,7 +38,7 @@ const Planets = ({ planets, getAllPlanets, getAllData }) => {
         <div className="planets-box-names">{allData}</div>
       </div>
       <div className="planets-box-names-wrapper">
-        <div className="planets-box-names">{allPlanets} </div>
+        <div className="planets-box-names">{allPlanets}</div>
       </div>
     </div>
   );
