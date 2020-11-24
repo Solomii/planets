@@ -16,10 +16,10 @@ const Planets = ({ planets, getAllPlanets, getAllData }) => {
     allData = planets.alldata.data.bodies.map((i) => (
       <div className="planets-box-name">
         {i.englishName} <br />
-        {/* <Link to={"/planets/bodies/" + i.id}>More...</Link>
+        <Link to={"/planets/bodies/" + i.id}>More...</Link>
         <Switch>
           <Route path="/planets/bodies/:id" component={PlanetDetals}></Route>
-        </Switch> */}
+        </Switch>
       </div>
     ));
   } else {
@@ -33,6 +33,8 @@ const Planets = ({ planets, getAllPlanets, getAllData }) => {
   } else {
     allPlanets = <div></div>;
   }
+  let { id } = useParams();
+  console.log(id);
   return (
     <div className="planets-box">
       <button className="planets-box-button" onClick={getAllData}>
