@@ -11,14 +11,14 @@ class PlanetDetals extends React.Component {
     };
   }
   componentDidMount() {
-    let baseUrl =
-      "https://api.le-systeme-solaire.net/rest/bodies/?filter[]=isPlanet,neq,false";
+    let baseUrl = "https://api.le-systeme-solaire.net/rest/bodies/";
     fetch(baseUrl + "lune")
       .then((res) => res.json())
       .then((json) => {
         console.log(this.state.items);
         this.setState({
           isLoaded: true,
+          // за цю лінійку напевно не правильно!!  items: json.bodies,
           items: json.bodies,
         });
       });

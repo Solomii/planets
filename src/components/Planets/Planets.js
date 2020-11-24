@@ -1,6 +1,13 @@
 import React from "react";
 import "./Planets.css";
-import { useParams, Link, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+  useParams,
+} from "react-router-dom";
 import PlanetDetals from "../PlanetDetals/PlanetDetals";
 
 const Planets = ({ planets, getAllPlanets, getAllData }) => {
