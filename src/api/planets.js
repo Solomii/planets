@@ -3,19 +3,13 @@ export const getAllData = () =>
     `https://api.le-systeme-solaire.net/rest/bodies/?filter[]=isPlanet,neq,false`
   );
 
-// export const getPlanetDetals = (id) =>
-//   fetch(
-//     ` https://api.le-systeme-solaire.net/rest/bodies/?filter[]=isPlanet,neq,false/=${id} `
-//   );
-
 export const getAllPlanets = () =>
   fetch(
     `https://api.le-systeme-solaire.net/rest/bodies/?filter[]=isPlanet,eq,false`
   );
-// export const getPlanetDetals = (id) =>
-//   fetch(
-//     ` https://api.le-systeme-solaire.net/rest/bodies/?filter[]=isPlanet,eq,false/=${id} `
-//   );
+
+export const getPlanetDetails = (id) =>
+  fetch(` https://api.le-systeme-solaire.net/rest/bodies/${id}`);
 
 // https://api.le-systeme-solaire.net/rest.php/bodies?filter[]=isPlanet,eq,true -планети
 // https://api.le-systeme-solaire.net/rest/bodies/

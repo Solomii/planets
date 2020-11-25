@@ -5,6 +5,9 @@ import {
   GET_ALL_PLANETS_REQUEST,
   GET_ALL_PLANETS_SUCCESS,
   GET_ALL_PLANETS_FAIL,
+  GET_ONE_PLANET_PREQUEST,
+  GET_ONE_PLANET_SUCCESS,
+  GET_ONE_PLANET_FAIL,
 } from "../constants/ActionTypes";
 
 const initialState = {
@@ -15,6 +18,12 @@ const initialState = {
   },
 
   alldata: {
+    isLoading: null,
+    error: null,
+    data: null,
+  },
+
+  onePlanet: {
     isLoading: null,
     error: null,
     data: null,
@@ -72,6 +81,33 @@ const planets = (state = initialState, action) => {
       return {
         ...state,
         alldata: {
+          isLoading: false,
+          error: action.payload,
+          data: false,
+        },
+      };
+    case GET_ONE_PLANET_PREQUEST:
+      return {
+        ...state,
+        onePlanet: {
+          isLoading: true,
+          error: null,
+          data: null,
+        },
+      };
+    case GET_ONE_PLANET_SUCCESS:
+      return {
+        ...state,
+        onePlanet: {
+          isLoading: false,
+          error: false,
+          data: action.payload,
+        },
+      };
+    case GET_ONE_PLANET_FAIL:
+      return {
+        ...state,
+        onePlanet: {
           isLoading: false,
           error: action.payload,
           data: false,
