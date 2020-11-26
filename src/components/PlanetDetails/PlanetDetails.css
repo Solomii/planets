@@ -1,4 +1,29 @@
-.planets-details {
-  background-color: #222020;
-  height: 500px;
+.planet-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.planet-details-loading {
+  color: aliceblue;
+}
+
+.planet-details-wrapper {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(22, 20, 20, 0.5);
+  border: 1px #6f6f6f solid;
+  border-radius: 8px;
+  border: 1px #6f6f6f solid;
+  color: aliceblue;
+  margin-left: 20px;
+  padding: 20px;
+}
+
+.planet-details-box {
+  margin-top: -10px;
 }

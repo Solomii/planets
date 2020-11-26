@@ -5,7 +5,7 @@ import {
   GET_ALL_PLANETS_REQUEST,
   GET_ALL_PLANETS_SUCCESS,
   GET_ALL_PLANETS_FAIL,
-  GET_ONE_PLANET_PREQUEST,
+  GET_ONE_PLANET_REQUEST,
   GET_ONE_PLANET_SUCCESS,
   GET_ONE_PLANET_FAIL,
 } from "../constants/ActionTypes";
@@ -37,7 +37,7 @@ const getData = async (dispatch) => {
 };
 
 const getOnePlanet = async (id, dispatch) => {
-  dispatch({ type: GET_ONE_PLANET_PREQUEST });
+  dispatch({ type: GET_ONE_PLANET_REQUEST });
 
   try {
     const response = await getPlanetDetails(id);

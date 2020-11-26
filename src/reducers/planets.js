@@ -5,7 +5,7 @@ import {
   GET_ALL_PLANETS_REQUEST,
   GET_ALL_PLANETS_SUCCESS,
   GET_ALL_PLANETS_FAIL,
-  GET_ONE_PLANET_PREQUEST,
+  GET_ONE_PLANET_REQUEST,
   GET_ONE_PLANET_SUCCESS,
   GET_ONE_PLANET_FAIL,
 } from "../constants/ActionTypes";
@@ -86,7 +86,7 @@ const planets = (state = initialState, action) => {
           data: false,
         },
       };
-    case GET_ONE_PLANET_PREQUEST:
+    case GET_ONE_PLANET_REQUEST:
       return {
         ...state,
         onePlanet: {
