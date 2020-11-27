@@ -9,7 +9,9 @@ const Planets = ({ planets, getAllPlanets, getAllData, getOnePlanet }) => {
     allData = planets.alldata.data.bodies.map((i) => (
       <div className="planets-box-name">
         {i.englishName} <br />
-        <Link to={"/planets/" + i.id}>More...</Link>
+        <Link className="planets-box-link" to={"/planets/" + i.id}>
+          More...
+        </Link>
       </div>
     ));
   } else {
@@ -20,7 +22,9 @@ const Planets = ({ planets, getAllPlanets, getAllData, getOnePlanet }) => {
     allPlanets = planets.planet.data.bodies.map((i) => (
       <div className="planets-box-name">
         {i.englishName} <br />
-        <Link to={"/planets/" + i.id}>More...</Link>
+        <Link className="planets-box-link" to={"/planets/" + i.id}>
+          More...
+        </Link>
       </div>
     ));
   } else {
@@ -28,9 +32,10 @@ const Planets = ({ planets, getAllPlanets, getAllData, getOnePlanet }) => {
   }
 
   return (
-    <div className="planets-box">
+   
       <Switch>
         <Route exact path="/planets">
+        <div className="planets-box">
           <div className="planets-box-buttons-wraper">
             <button className="planets-box-button" onClick={getAllData}>
               Planets
@@ -40,9 +45,8 @@ const Planets = ({ planets, getAllPlanets, getAllData, getOnePlanet }) => {
             </button>
           </div>
           <div className="planets-box-names">
-            <div className="planets-box-names-wrapper">
-              <div className="planets-box-names">{allData}</div>
-              <div className="planets-box-names">{allPlanets}</div>
+              {allData}
+              {allPlanets}
             </div>
           </div>
         </Route>
@@ -57,7 +61,7 @@ const Planets = ({ planets, getAllPlanets, getAllData, getOnePlanet }) => {
           )}
         />
       </Switch>
-    </div>
+  
   );
 };
 export default Planets;

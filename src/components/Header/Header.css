@@ -12,8 +12,14 @@
   margin-left: 150px;
 }
 
+.planets-header-logo {
+  color: aliceblue;
+  margin-top: 25px;
+}
+
 .planets-header-text {
   color: #6f6f6f;
+  display: flex;
 }
 
 .planets-header-social-icons {

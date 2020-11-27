@@ -1,6 +1,6 @@
 import React from "react";
 import "./PlanetDetails.css";
-
+import eris from "../../img/eris.jpg"
 class PlanetDetails extends React.Component {
   constructor(props) {
     super(props);
@@ -56,8 +56,33 @@ class PlanetDetails extends React.Component {
     return list;
   }
 
+  handleListPlanetPhoto (){
+    let namePlanetPhoto = [
+      "ceres",
+      "eris",
+      "uranus",
+      "pluton",
+      "neptune", 
+      "haumea",
+      "makemake",
+      "jupiter",
+      "mars",
+      "mercure",
+      "saturne",
+      "terre",
+      "venus",
+    ];
+
+
+
+
+  }
+  
+
   render() {
     console.log(this.props);
+
+    // const myImg ='../../img/eris.jpg'
 
     const { error, isLoading, data } = this.props.data.onePlanet;
     if (error) {
@@ -69,8 +94,16 @@ class PlanetDetails extends React.Component {
       return (
         <div className="planet-details">
           <div className="planet-details-wrapper">
+            <div>
             <h2>Information</h2>
             <ol className="planet-details-box">{this.handleList(data)}</ol>
+            </div>
+            <div>
+              {/* const eris = require("../../img/eris.jpg") */}
+            <img src={eris} alt="" />
+
+            {/* <img src={require(`../../img/${myImg}`)} /> */}
+            </div>
           </div>
         </div>
       );

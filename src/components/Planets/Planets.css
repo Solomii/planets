@@ -2,13 +2,13 @@
   display: flex;
   background: url(../../img/b2.jpg) center/cover;
   background-repeat: no-repeat;
-  /* justify-content: space-between; */
   flex-direction: row;
 }
 
 .planets-box-buttons-wraper {
-  display: inline-block;
-  flex-direction: row;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
 }
 
 .planets-box-button {
@@ -25,6 +25,9 @@
 
 .planets-box-button:hover {
   color: aliceblue;
+  -webkit-box-shadow: 0px 0px 5px 2px rgba(253, 250, 250, 0.835);
+  -moz-box-shadow: 0px 0px 5px 2px rgba(253, 250, 250, 0.835);
+  box-shadow: 0px 0px 5px 2px rgba(253, 250, 250, 0.835);
 }
 
 .planets-box-button:active {
@@ -39,37 +42,51 @@
 
 .planets-box-names {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
-}
-
-.planets-box-names-wrapper {
   margin-left: 30px;
   display: flex;
-  height: 300px;
-  overflow: hidden;
-  flex-direction: row;
-}
-
-.planets-box-names {
+  height: 500px;
   overflow-y: auto;
-  display: flex;
-  color: aliceblue;
-  flex-wrap: wrap;
+  width: auto;
+  white-space: nowrap;
+  
 }
 
 .planets-box-name {
+  padding: 10;
   text-align: center;
   border-radius: 8px;
   width: 120px;
-  height: 50px;
+  height: 65px;
+  color: aliceblue;
   margin: 10px;
   border: 1px #6f6f6f solid;
   cursor: pointer;
   padding: 5px;
   background: rgba(22, 20, 20, 0.5);
+  -webkit-box-shadow: 0px 0px 4px 1px rgba(253, 250, 250, 0.835);
+  -moz-box-shadow: 0px 0px 4px 1px rgba(253, 250, 250, 0.835);
+  box-shadow: 0px 0px 4px 1px rgba(253, 250, 250, 0.835);
 }
 
 .planets-box-name:hover {
   color: rgb(144, 146, 144);
   background: rgba(22, 20, 20, 0.9);
+  -webkit-box-shadow: 0px 0px 8px 2px rgba(253, 250, 250, 0.835);
+  -moz-box-shadow: 0px 0px 8px 2px rgba(253, 250, 250, 0.835);
+  box-shadow: 0px 0px 8px 2px rgba(253, 250, 250, 0.835);
+}
+
+.planets-box-link {
+  color: rgba(203, 207, 209, 0.835);
+  text-decoration: none;
+
+}
+
+.planets-box-link:hover {
+  color:aliceblue;
+  
+
 }

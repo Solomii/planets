@@ -1,6 +1,9 @@
 import React from "react";
 import "./Header.css";
+// import a from "../../img/a.jpg"
 import { FaFacebookF, FaTwitter, FaGithub } from "react-icons/fa";
+import { GiRingedPlanet } from "react-icons/gi";
+
 import { SiCircle } from "react-icons/si";
 
 const HeaderPlanets = () => {
@@ -9,8 +12,12 @@ const HeaderPlanets = () => {
       <div className="planets-header-wrapper">
         <div className="planets-header-logo-text">
           <div className="planets-header-text">
-            {/* <img src="../../img/logo.png" alt="" /> */}
-            <h3>Planets</h3>
+            {/* <div className="planets-header-logo">
+              <GiRingedPlanet />
+            </div> */}
+
+            {/* <img src={a} alt="" /> */}
+            <h2>Pl<span>a</span>nets</h2>
           </div>
         </div>
         <div className="planets-header-social-icons">
