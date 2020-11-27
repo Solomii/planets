@@ -3,8 +3,8 @@ import "./Planets.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import PlanetDetails from "../PlanetDetails/PlanetDetails";
 
-const Planets = ({ planets, getAllPlanets, getAllData, getOnePlanet }) => {
-  let allData, allPlanets;
+const Planets = ({ planets, getAllPlanets, getAllData, getOnePlanet, }) => {
+  let allData, allPlanets, open;
   if (planets.alldata && planets.alldata.data && planets.alldata.data.bodies) {
     allData = planets.alldata.data.bodies.map((i) => (
       <div className="planets-box-name">
@@ -30,6 +30,7 @@ const Planets = ({ planets, getAllPlanets, getAllData, getOnePlanet }) => {
   } else {
     allPlanets = <div></div>;
   }
+
 
   return (
    
