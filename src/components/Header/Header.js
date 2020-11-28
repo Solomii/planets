@@ -12,12 +12,13 @@ const HeaderPlanets = () => {
       <div className="planets-header-wrapper">
         <div className="planets-header-logo-text">
           <div className="planets-header-text">
-            {/* <div className="planets-header-logo">
-              <GiRingedPlanet />
-            </div> */}
-
-            {/* <img src={a} alt="" /> */}
-            <h2>Pl<span>a</span>nets</h2>
+            <h2>
+              Sp
+              <span className="planets-header-logo">
+                <GiRingedPlanet />
+              </span>
+              ce Bodies
+            </h2>
           </div>
         </div>
         <div className="planets-header-social-icons">

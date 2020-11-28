@@ -10,8 +10,7 @@
 }
 
 .planets-footer-section-one-wrapper {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px 0px;
   display: flex;
 }
 
@@ -24,6 +23,7 @@
   margin-top: 16px;
   text-decoration: none;
 }
+
 .planets-footer-http:hover {
   color: aliceblue;
 }
@@ -37,6 +37,47 @@
 }
 
 .planets-footer-section-two-wrapper {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 5px;
+}
+
+@media screen and (max-width: 750px) {
+  .planets-footer-section-one {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .planets-footer-phon {
+    margin-right: 0px;
+  }
+
+  .planets-footer-section-one-wrapper {
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+
+  .planets-header-box-icon {
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 488px) {
+  .planets-footer-section-one {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px;
+  }
+
+  .planets-footer-section-one-wrapper {
+    margin: 20px 0px;
+    flex-direction: column;
+  }
+
+  .planets-footer-http {
+    margin-top: 3px;
+  }
 }

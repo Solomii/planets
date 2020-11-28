@@ -1,6 +1,6 @@
 import React from "react";
 import "./PlanetDetails.css";
-import eris from "../../img/eris.jpg"
+import eris from "../../img/eris.jpg";
 class PlanetDetails extends React.Component {
   constructor(props) {
     super(props);
@@ -34,9 +34,6 @@ class PlanetDetails extends React.Component {
       "flattening",
       "sideralOrbit",
       "sideralRotation",
-      // "discoveredBy",
-      // "discoveryDate",
-      // "alternativeName",
     ];
     // let list = [];
     let list = nameList.map((item) => (
@@ -56,13 +53,13 @@ class PlanetDetails extends React.Component {
     return list;
   }
 
-  handleListPlanetPhoto (){
+  handleListPlanetPhoto() {
     let namePlanetPhoto = [
       "ceres",
       "eris",
       "uranus",
       "pluton",
-      "neptune", 
+      "neptune",
       "haumea",
       "makemake",
       "jupiter",
@@ -72,12 +69,7 @@ class PlanetDetails extends React.Component {
       "terre",
       "venus",
     ];
-
-
-
-
   }
-  
 
   render() {
     console.log(this.props);
@@ -86,23 +78,23 @@ class PlanetDetails extends React.Component {
 
     const { error, isLoading, data } = this.props.data.onePlanet;
     if (error) {
-      return <div>Error!</div>;
+      return <div className="planet-details-loading-error">Error!</div>;
     }
     if (isLoading) {
-      return <div className="planet-details-loading">Loading...</div>;
+      return <div className="planet-details-loading-error">Loading...</div>;
     } else {
       return (
         <div className="planet-details">
           <div className="planet-details-wrapper">
             <div>
-            <h2>Information</h2>
-            <ol className="planet-details-box">{this.handleList(data)}</ol>
+              <h2 className="planet-details-title">Information</h2>
+              <ol className="planet-details-box">{this.handleList(data)}</ol>
             </div>
             <div>
               {/* const eris = require("../../img/eris.jpg") */}
-            <img src={eris} alt="" />
+              <img className="planet-details-img" src={eris} alt="" />
 
-            {/* <img src={require(`../../img/${myImg}`)} /> */}
+              {/* <img src={require(`../../img/${myImg}`)} /> */}
             </div>
           </div>
         </div>
@@ -111,29 +103,3 @@ class PlanetDetails extends React.Component {
   }
 }
 export default PlanetDetails;
-
-{
-  /* {Object.keys(i).map(function (keyName, keyIndex) {
-          return (
-            <p>
-              {JSON.stringify(i, null, 2)}
-              {console.log(i[keyName])}
-            </p>
-          );
-        })} */
-}
-
-{
-  /* {Object.keys(i).map(function (keyName, keyIndex) {
-          return (
-            // <p key={keyName}>
-            //   {keyName}
-            //   {console.log(i[keyName])}
-            // </p>
-            // <p>
-            //   {JSON.stringify(i, null, 2)}
-            //   {console.log(i[keyName])}
-            // </p>
-          );
-        })} */
-}

@@ -10,11 +10,7 @@
 .planets-header-logo-text {
   display: flex;
   margin-left: 150px;
-}
 
-.planets-header-logo {
-  color: aliceblue;
-  margin-top: 25px;
 }
 
 .planets-header-text {
@@ -25,6 +21,7 @@
 .planets-header-social-icons {
   margin-right: 100px;
   padding-top: 8px;
+  margin-top: 10px;
   display: flex;
 }
 
@@ -38,4 +35,37 @@
 
 .planets-header-icon:hover {
   color: aliceblue;
+}
+
+@media screen and (max-width: 960px) {
+  .planets-header-logo-text {
+    margin-left: 100px;
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .planets-header-logo-text {
+    margin-left: 50px;
+    padding-left: 10px;
+  }
+
+  .planets-header-social-icons {
+    margin-right: 50px;  
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .planets-header-logo-text {
+    margin-left: 0px;
+  }
+
+  .planets-header-social-icons {
+    margin-right: 0px;
+  }
+
+  
+  .planets-header-box-icon {
+    margin: 10px;
+  }
 }
