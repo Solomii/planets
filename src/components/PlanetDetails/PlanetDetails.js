@@ -1,6 +1,19 @@
 import React from "react";
 import "./PlanetDetails.css";
 import eris from "../../img/eris.jpg";
+import ceres from "../../img/ceres.jpg";
+import haumea from "../../img/haumea.jpg";
+import jupiter from "../../img/jupiter.jpg";
+import makemake from "../../img/makemake.jpg";
+import mars from "../../img/mars.jpg";
+import mercure from "../../img/mercure.jpg";
+import neptune from "../../img/neptune.jpg";
+import pluton from "../../img/pluton.jpg";
+import saturne from "../../img/saturne.jpg";
+import terre from "../../img/terre.jpg";
+import uranus from "../../img/uranus.png";
+import venus from "../../img/venus.jpg";
+
 class PlanetDetails extends React.Component {
   constructor(props) {
     super(props);
@@ -35,40 +48,58 @@ class PlanetDetails extends React.Component {
       "sideralOrbit",
       "sideralRotation",
     ];
-    // let list = [];
     let list = nameList.map((item) => (
       <li key={item}>
         {item} = {data[item]}
       </li>
     ));
-    // list.push(
-    //   <li key={key}>
-    //     {key}={data[key]}
-    //   </li>
-    // );
-
-    // let list = this.state.data.map((item) => <li key={item.id}>{item.id}</li>);
-    // console.log(list);
-    // console.log(this.props);
     return list;
   }
 
-  handleListPlanetPhoto() {
-    let namePlanetPhoto = [
-      "ceres",
-      "eris",
-      "uranus",
-      "pluton",
-      "neptune",
-      "haumea",
-      "makemake",
-      "jupiter",
-      "mars",
-      "mercure",
-      "saturne",
-      "terre",
-      "venus",
-    ];
+  handleListPlanetPhoto(data) {
+    switch (data.id) {
+      case "eris":
+        return eris;
+      case "ceres":
+        return ceres;
+      case "haumea":
+        return haumea;
+      case "jupiter":
+        return jupiter;
+      case "makemake":
+        return makemake;
+      case "mars":
+        return mars;
+      case "mercure":
+        return mercure;
+      case "neptune":
+        return neptune;
+      case "pluton":
+        return pluton;
+      case "saturne":
+        return saturne;
+      case "terre":
+        return terre;
+      case "uranus":
+        return uranus;
+      case "venus":
+        return venus;
+      default:
+        break;
+    }
+    // "ceres",
+    // "eris",
+    // "uranus",
+    // "pluton",
+    // "neptune",
+    // "haumea",
+    // "makemake",
+    // "jupiter",
+    // "mars",
+    // "mercure",
+    // "saturne",
+    // "terre",
+    // "venus",
   }
 
   render() {
@@ -92,8 +123,12 @@ class PlanetDetails extends React.Component {
             </div>
             <div>
               {/* const eris = require("../../img/eris.jpg") */}
-              <img className="planet-details-img" src={eris} alt="" />
-
+              {/* <img className="planet-details-img" src={eris} alt="" /> */}
+              <img
+                className="planet-details-img"
+                src={this.handleListPlanetPhoto(data)}
+                alt=""
+              />
               {/* <img src={require(`../../img/${myImg}`)} /> */}
             </div>
           </div>

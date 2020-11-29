@@ -57,10 +57,10 @@ const Planets = ({ planets, getAllPlanets, getAllData, getOnePlanet }) => {
         <div className="planets-box">
           <div className="planets-box-buttons-wraper">
             <button className="planets-box-button" onClick={getAllData}>
-              Planets
+              Bodies
             </button>
             <button className="planets-box-button" onClick={getAllPlanets}>
-              Bodies
+              Planets
             </button>
           </div>
           <div className="planets-box-names">
