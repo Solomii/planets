@@ -11,7 +11,7 @@ import neptune from "../../img/neptune.jpg";
 import pluton from "../../img/pluton.jpg";
 import saturne from "../../img/saturne.jpg";
 import terre from "../../img/terre.jpg";
-import uranus from "../../img/uranus.png";
+import uranus from "../../img/uranus.jpg";
 import venus from "../../img/venus.jpg";
 
 class PlanetDetails extends React.Component {
@@ -87,26 +87,11 @@ class PlanetDetails extends React.Component {
       default:
         break;
     }
-    // "ceres",
-    // "eris",
-    // "uranus",
-    // "pluton",
-    // "neptune",
-    // "haumea",
-    // "makemake",
-    // "jupiter",
-    // "mars",
-    // "mercure",
-    // "saturne",
-    // "terre",
-    // "venus",
   }
 
   render() {
     console.log(this.props);
-
     // const myImg ='../../img/eris.jpg'
-
     const { error, isLoading, data } = this.props.data.onePlanet;
     if (error) {
       return <div className="planet-details-loading-error">Error!</div>;
