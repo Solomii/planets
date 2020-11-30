@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.css";
-// import a from "../../img/a.jpg"
+import { Switch, Route, Link } from "react-router-dom";
 import { FaFacebookF, FaTwitter, FaGithub } from "react-icons/fa";
 import { GiRingedPlanet } from "react-icons/gi";
 

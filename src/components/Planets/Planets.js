@@ -14,10 +14,12 @@ const Planets = ({ planets, getAllPlanets, getAllData, getOnePlanet }) => {
       planets.showPlanets = true;
       allData = planets.alldata.data.bodies.map((i) => (
         <div className="planets-box-name">
-          {i.englishName} <br />
-          <Link className="planets-box-link" to={"/planets/" + i.id}>
-            More...
-          </Link>
+          <div className="planets-name">{i.englishName}</div>
+          <div>
+            <Link className="planets-link" to={"/planets/" + i.id}>
+              More...
+            </Link>
+          </div>
         </div>
       ));
     } else {
@@ -35,10 +37,12 @@ const Planets = ({ planets, getAllPlanets, getAllData, getOnePlanet }) => {
       planets.showBodies = true;
       allPlanets = planets.planet.data.bodies.map((i) => (
         <div className="planets-box-name">
-          {i.englishName} <br />
-          <Link className="planets-box-link" to={"/planets/" + i.id}>
-            More...
-          </Link>
+          <div className="planets-name">{i.englishName}</div>
+          <div>
+            <Link className="planets-link" to={"/planets/" + i.id}>
+              More...
+            </Link>
+          </div>
         </div>
       ));
     } else {

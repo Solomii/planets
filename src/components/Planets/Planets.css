@@ -51,7 +51,6 @@
   overflow-y: auto;
   width: auto;
   white-space: nowrap;
-  
 }
 
 .planets-box-name {
@@ -66,27 +65,29 @@
   cursor: pointer;
   padding: 5px;
   background: rgba(22, 20, 20, 0.5);
-  -webkit-box-shadow: 0px 0px 4px 1px rgba(253, 250, 250, 0.835);
-  -moz-box-shadow: 0px 0px 4px 1px rgba(253, 250, 250, 0.835);
-  box-shadow: 0px 0px 4px 1px rgba(253, 250, 250, 0.835);
+  -webkit-box-shadow: 0px 0px 7px 3px rgba(253, 250, 250, 0.835);
+  -moz-box-shadow: 0px 0px 7px 3px rgba(253, 250, 250, 0.835);
+  box-shadow: 0px 0px 7px 3px rgba(253, 250, 250, 0.835);
 }
 
 .planets-box-name:hover {
   color: rgb(144, 146, 144);
   background: rgba(22, 20, 20, 0.9);
-  -webkit-box-shadow: 0px 0px 8px 2px rgba(253, 250, 250, 0.835);
-  -moz-box-shadow: 0px 0px 8px 2px rgba(253, 250, 250, 0.835);
-  box-shadow: 0px 0px 8px 2px rgba(253, 250, 250, 0.835);
+  -webkit-box-shadow: 0px 0px 10px 3px rgba(253, 250, 250, 0.835);
+  -moz-box-shadow: 0px 0px 10px 3px rgba(253, 250, 250, 0.835);
+  box-shadow: 0px 0px 10px 3px rgba(253, 250, 250, 0.835);
 }
 
-.planets-box-link {
+.planets-name {
+  margin-top: 11px;
+}
+
+.planets-link {
   color: rgba(203, 207, 209, 0.835);
   text-decoration: none;
-
+  font-size: 13px;
 }
 
-.planets-box-link:hover {
-  color:aliceblue;
-  
-
+.planets-link:hover {
+  color: aliceblue;
 }
