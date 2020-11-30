@@ -41,7 +41,6 @@ const planets = (state = initialState, action) => {
           isLoading: true,
           error: null,
           data: null,
-          showDiv: false,
         },
       };
     case GET_ALL_PLANETS_SUCCESS:
