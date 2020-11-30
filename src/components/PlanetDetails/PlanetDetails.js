@@ -23,6 +23,7 @@ class PlanetDetails extends React.Component {
       error: null,
     };
     this.handleList = this.handleList.bind(this);
+    this.handleListPlanetPhoto = this.handleListPlanetPhoto.bind(this);
   }
 
   componentDidMount() {
