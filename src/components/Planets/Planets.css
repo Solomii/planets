@@ -35,11 +35,6 @@
   box-shadow: 0 3px #26272d;
 }
 
-.planets-box-button:active {
-  transform: translateY(4px);
-  box-shadow: 0 3px #26272d;
-}
-
 .planets-box-names {
   display: flex;
   flex-wrap: wrap;
@@ -47,7 +42,7 @@
   justify-content: center;
   margin-left: 30px;
   display: flex;
-  height: 500px;
+  height: 550px;
   overflow-y: auto;
   width: auto;
   white-space: nowrap;

@@ -10,12 +10,17 @@
 .planets-header-logo-text {
   display: flex;
   margin-left: 150px;
-
 }
 
 .planets-header-text {
   color: #6f6f6f;
   display: flex;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.planets-header-text:hover {
+  color: aliceblue;
 }
 
 .planets-header-social-icons {
@@ -51,7 +56,7 @@
   }
 
   .planets-header-social-icons {
-    margin-right: 50px;  
+    margin-right: 50px;
   }
 }
 
@@ -64,7 +69,6 @@
     margin-right: 0px;
   }
 
-  
   .planets-header-box-icon {
     margin: 10px;
   }

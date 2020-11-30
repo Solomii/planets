@@ -11,15 +11,15 @@ const HeaderPlanets = () => {
     <header className="planets-header">
       <div className="planets-header-wrapper">
         <div className="planets-header-logo-text">
-          <div className="planets-header-text">
+          <Link className="planets-header-text" to="/planets/">
             <h2>
               Sp
-              <span className="planets-header-logo">
+              <span>
                 <GiRingedPlanet />
               </span>
               ce Bodies
             </h2>
-          </div>
+          </Link>
         </div>
         <div className="planets-header-social-icons">
           <div className="planets-header-box-icon">
