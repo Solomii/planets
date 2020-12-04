@@ -21,7 +21,7 @@ const PlanetsFooter = () => {
       <section className="planets-footer-section-two">
         <div className="planets-footer-section-two-wrapper">
           <p className="planets-footer-text">
-            Made with ♥ by Solomiya - Copyright © 2020
+            Made with ♥ by Solomiya Kushniryk - Copyright © 2020
           </p>
         </div>
       </section>
