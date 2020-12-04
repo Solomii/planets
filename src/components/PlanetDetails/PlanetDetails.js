@@ -92,7 +92,6 @@ class PlanetDetails extends React.Component {
 
   render() {
     console.log(this.props);
-    // const myImg ='../../img/eris.jpg'
     const { error, isLoading, data } = this.props.data.onePlanet;
     if (error) {
       return <div className="planet-details-loading-error">Error!</div>;
@@ -108,14 +107,11 @@ class PlanetDetails extends React.Component {
               <ol className="planet-details-box">{this.handleList(data)}</ol>
             </div>
             <div>
-              {/* const eris = require("../../img/eris.jpg") */}
-              {/* <img className="planet-details-img" src={eris} alt="" /> */}
               <img
                 className="planet-details-img"
                 src={this.handleListPlanetPhoto(data)}
                 alt=""
               />
-              {/* <img src={require(`../../img/${myImg}`)} /> */}
             </div>
           </div>
         </div>
